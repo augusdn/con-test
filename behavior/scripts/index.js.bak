@@ -33,17 +33,6 @@ exports.handle = (client) => {
     }
   })
 
-const handleGoodbye = client.createStep({
-  satisfied() {
-    return false
-  },
-
-  prompt() {
-    client.addResponse('goodbye')
-    client.done()
-  }
-})
-
 const handleGreeting = client.createStep({
   satisfied() {
     return false
